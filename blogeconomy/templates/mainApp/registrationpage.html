@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="form-wrap">
+  <div class="profile"><img src="https://html5book.ru/wp-content/uploads/2016/10/profile-image.png">
+    <h1>Регистрация</h1>
+  </div>
+  <form method="post" action="create/">
+      {% csrf_token %}
+    <div>
+      <label for="name">Имя</label>
+      <input type="text" name="name" value="{{ name }}">
+
+    </div>
+
+    <div>
+      <label for="category">Категория</label>
+      <select name ="category" >
+        <option>Выберите категорию</option>
+        <option value="Студент">Студент</option>
+        <option value="Школьник">Школьник</option>
+        <option value="Пенсионер">Пенсионер</option>
+           <option value="Работаю">Работаю</option>
+      </select>
+       <div class="select-arrow"></div>
+    </div>
+    <div>
+      <label for="purpose">Цель</label>
+      <select name="purpose">
+        <option>Выберите цель</option>
+        <option value="Просто так">Просто так</option>
+        <option value="Экономия">Экономия</option>
+        <option value="Сбережения">Сбережения</option>
+      </select>
+
+      <div class="select-arrow"></div>
+    </div>
+<div>
+      <label for="password">Пароль</label>
+      <input type="text" name="password" required>
+    </div>
+<div>
+      <label for="salary">Зарплата</label>
+      <input type="text" name="salary" required>
+    </div>
+    <button type="submit">Отправить</button>
+  </form>
+     {% if people.count > 0 %}
+    <h2>Список пользователей</h2>
+    <table>
+        <tr><th>Id</th><th>Имя</th><th>Категория</th></tr>
+        {% for person in people %}
+        <tr><td>{{ person.id}}</td><td>{{ person.Name }}</td><td>{{ person.Category }}</td></tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+
+</div>
+</body>
+</html>

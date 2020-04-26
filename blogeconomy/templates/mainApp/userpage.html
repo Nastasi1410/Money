@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form method="post" action="write/">
+    {% csrf_token %}
+<div align="left">
+     <input maxlength="25" size="40" name="Usern" value="{{Usern.id}}"></p>
+<p>Имя пользователя</p>
+<p>{{Usern.Name }}</p>
+<p>Категория</p>
+<p>{{ Usern.Category}}</p>
+<p>Указаная зарплата за месяц</p>
+<p>{{ Usern.Salary }}</p>
+    <p>{{ Date }}</p>
+</div>
+
+
+    <h1>Сколько вы сегодня потратили ?</h1>
+   <p><strong>Категория продукты:</strong>
+    <input maxlength="25" size="40" name="category1"></p>
+   <p><strong>Категория общественный транспорт:</strong>
+    <input maxlength="25" size="40" name="category2"  ></p>
+     <p><strong>Категория Комунальные платежи/квартплата:</strong>
+      <input maxlength="25" size="40" name="category3"></p>
+    <p><strong>Категория Домашние Животные:</strong>
+ <input maxlength="25" size="40" name="category4"></p>
+     <p><strong>Категория Развлечения:</strong>
+ <input maxlength="25" size="40" name="category5"></p>
+     <p><strong>Категория Внеплановые расходы:</strong>
+ <input maxlength="25" size="40" name="category6"></p>
+     <p><strong>Категория одежда/уход за собой:</strong>
+ <input maxlength="25" size="40" name="category7"></p>
+     <p><strong>Категория одежда/уход за собой:</strong>
+ <input maxlength="25" size="40" name="category7"></p>
+      <p><strong>Категория аптека/медецина:</strong>
+ <input maxlength="25" size="40" name="category8"></p>
+     <p><strong>Категория подпски/абонементы/курсы/пополнение мобильного:</strong>
+ <input maxlength="25" size="40" name="category9"></p>
+    <p><strong>Категория бытовые расходы:</strong>
+ <input maxlength="25" size="40" name="category10"></p>
+      </p>
+    <button>Сохранить</button>
+</form>
+
+
+
+
+</body>
+</html>

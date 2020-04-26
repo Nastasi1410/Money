@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Заголовок страницы</title>
+
+    <link rel = "stylesheet" href= "css/bootstrap.css" type="text/css">
+</head>
+
+<body style="background-color: lavender">
+<h1 align="center" > <font-family face ="GABRIOLA" ><i>Забота о деньгах </i></font-family> </h1>
+<h1 align="center" > <font-family face ="GABRIOLA" ><i>Вход</i></font-family> </h1>
+<div align="center">
+<form action="pageuser/" method="get">
+   <p><strong>Имя:</strong>
+    <input maxlength="25" size="40" name="login"></p>
+   <p><strong>Пароль:</strong>
+    <input type="password" maxlength="25" size="40" name="password"  ></p>
+      <p style="text-align: center"><button >Вход</button>
+
+      </p>
+</form>
+</div>
+<div>
+ <p><button onclick="window.open({% url 'blogeconomy:registration' %})">Регестрация</button>
+ </p></div>
+<img src="https://cdn.pixabay.com/photo/2020/01/07/12/54/piggy-bank-4747516_960_720.png",heigh="100",width="200">
+{% block content %}
+{% endblock %}
+</body>
+</html>
